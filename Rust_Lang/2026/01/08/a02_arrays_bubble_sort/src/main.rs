@@ -30,6 +30,7 @@ fn main() {
             }
         }
     }
-
+    println!("~~~~~~~");
     println!("bubble sort ~~~~end");
+    print_array01(&sortable);
 }

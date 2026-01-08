@@ -23,6 +23,7 @@
 
 # HacksNews글
 - [In Rust, strings are always valid UTF8, and attempting to create a string with invalid UTF8 will panic at runtime ](https://news.ycombinator.com/item?id=40382524)
+- [All of Rust's complexity for strings comes out of complexity due to UTF-8. Well, a tiny bit comes from the fact that Rust has pointers too, but most of it is UTF-8.](https://news.ycombinator.com/item?id=21334799)
 
 # Unicode
 - https://unicode-rs.github.io/unicode-segmentation/unicode_segmentation/index.html

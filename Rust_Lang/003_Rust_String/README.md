@@ -15,6 +15,8 @@
     - I'm never worried that I'm going to hit a performance dead-end with Rust. There's always the unsafe escape hatch that allows very low-level optimizations (and it's not needed often).
     - Fearless concurrency is real. The occasional awkwardness of the borrow checker pays off in making parallel programming practical.
 
+# How Long Is a String? | A Rust Brain Teaser | Herbert Wolverson | Mar 23, 2022
+- https://medium.com/pragmatic-programmers/how-long-is-a-string-c25a086afe31
 
 # Does `OsString`’s `From<String>` allocate? | post by zeta12ti on May 19, 2020 | zeta12ti
 - https://users.rust-lang.org/t/does-osstring-s-from-string-allocate/42879

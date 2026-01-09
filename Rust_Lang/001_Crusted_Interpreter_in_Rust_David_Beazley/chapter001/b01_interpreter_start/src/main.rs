@@ -7,8 +7,8 @@ fn main() {
     println!("Hello, lox!");
 
     let mut chunk = Chunk::new();
-    chunk.write(OP_RETURN);
     let constant = chunk.add_constant(1.2);
-    chunk.write(OP_CONSTANT(constant as f64));
+    chunk.write(OP_CONSTANT(constant), 1);
+    chunk.write(OP_RETURN, 1);
     chunk.disassemble("test chunk");
 }

@@ -5,13 +5,14 @@ use crate::value::Value;
 #[derive(Debug)]
 pub enum OpCode {
     OP_RETURN,
-    OP_CONSTANT(Value),
+    OP_CONSTANT(usize),
 }
 
 #[derive(Debug)]
 pub struct Chunk {
     code: Vec<OpCode>,
     constants: Vec<Value>,
+    lines: Vec<usize>,
 }
 
 impl Chunk {
@@ -19,6 +20,7 @@ impl Chunk {
         Chunk {
             code: Vec::new(),
             constants: Vec::new(),
+            lines: Vec::new(),
         }
     }
 
@@ -27,8 +29,9 @@ impl Chunk {
         self.constants.len() - 1
     }
 
-    pub fn write(&mut self, op: OpCode) {
-        self.code.push(op)
+    pub fn write(&mut self, op: OpCode, line: usize) {
+        self.code.push(op);
+        self.lines.push(line);
     }
 
     pub fn disassemble(&self, name: &str) {

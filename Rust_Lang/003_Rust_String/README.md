@@ -56,3 +56,23 @@ Uday Hiwarale · Dec 23, 2024](https://medium.com/rustycrab/unlocking-the-power-
 
 # UTF-8이 아닌 UTF-16으로 신기하네.
 - [UTF-16 Encoding : Rust | September 9, 2025](https://mojoauth.com/character-encoding-decoding/utf-16-encoding--rust/#introduction-to-utf-16)
+
+# 인수 하나씩 받기 Closure활용
+
+```rs
+fn main() {
+    std::env::args()
+        .skip(1)
+        .enumerate()
+        .for_each(|(i, arg)| {
+            println!("arg[{}] = {}", i, arg);
+        });
+}
+```
+
+```bash
+cargo run -- hello 안녕
+
+arg[0] = hello
+arg[1] = 안녕
+```

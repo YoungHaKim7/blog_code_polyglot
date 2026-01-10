@@ -92,3 +92,7 @@ fn main() {
 ```
 
 <hr />
+
+
+# 16. Strings | MIT OpenCourseWare
+- https://youtu.be/NinWEPPrkDQ?si=eyGmMKq2SFImZeti

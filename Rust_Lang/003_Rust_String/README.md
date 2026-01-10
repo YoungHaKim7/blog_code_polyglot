@@ -2,6 +2,10 @@
 
 <hr />
 
+# Rust vs C String 더 깊게 들어가기
+- Working with strings in Rust 
+  - https://fasterthanli.me/articles/working-with-strings-in-rust
+
 # Rust #8: Strings 
 - https://dev.to/cthutu/rust-8-strings-53o
 

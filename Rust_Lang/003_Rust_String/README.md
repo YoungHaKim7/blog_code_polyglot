@@ -43,6 +43,10 @@
 - [Understanding The UTF-8 Encoding Algorithm in Rust | April 05, 2025](https://css-plus.com/2025/understanding-the-utf-8-encoding-algorithm-in-rust/)
 - [Answering Rust Strings, UTF-8, Variable Encoding, Clone On Write (COW), String Trait methods, and why Strings can't be indexed Explore Strings in general and how Rust protects us from invalid string operations.An In-Depth Introduction to Strings in Rust and Their Distinctions Updated January 12, 2024](https://sanjeevi.hashnode.dev/answering-rust-strings-utf-8-variable-encoding-clone-on-write-cow-string-trait-methods-and-why-strings-cant-be-indexed)
 - [You probably don't need to validate UTF-8 strings | Written 2024-05-16](https://viralinstruction.com/posts/utf8/)
+- [A Deep Dive Into Strings in Rust](https://calmops.com/programming/rust/a-deep-dive-into-strings-in-rust/)
+
+- [In-Depth Guide to Working with Strings in Rust by Alex Merced September 17th, 2024](https://hackernoon.com/in-depth-guide-to-working-with-strings-in-rust)
+- [A Deep Dive Into Strings in Rust |  Moe Katib Posted on Jun 22, 2023 • Edited on Jun 27, 2023](https://dev.to/moekatib/a-deep-dive-into-strings-in-rust-4hhp)
 
 # Rust커뮤티니글
 - [How to return a simple str (Unsized UTF-8 sequence of Unicode string slices) from a function](https://users.rust-lang.org/t/how-to-return-a-simple-str-unsized-utf-8-sequence-of-unicode-string-slices-from-a-function/43957)

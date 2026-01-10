@@ -76,3 +76,15 @@ cargo run -- hello 안녕
 arg[0] = hello
 arg[1] = 안녕
 ```
+
+# ✅ Converted to for Loop (Simple & Clear)
+
+```rs
+fn main() {
+    for (i, arg) in std::env::args().skip(1).enumerate() {
+        println!("arg[{}] = {}", i, arg);
+    }
+}
+```
+
+<hr />

@@ -1,0 +1,6 @@
+[package]
+name = "b03_closure2_flatmap_ver_direct_indexing_str"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

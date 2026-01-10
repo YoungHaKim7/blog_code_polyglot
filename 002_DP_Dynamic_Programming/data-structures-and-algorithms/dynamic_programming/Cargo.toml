@@ -1,0 +1,12 @@
+[package]
+name = "dsa-dynamic-programming"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "text_diff"
+path = "src/bin/text_diff.rs"
+
+[[bin]]
+name = "print_dp_matrix"
+path = "src/bin/print_dp_matrix.rs"

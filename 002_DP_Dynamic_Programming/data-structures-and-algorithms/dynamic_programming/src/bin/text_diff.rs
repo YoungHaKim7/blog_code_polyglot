@@ -1,6 +1,5 @@
-use std::env;
-use std::process;
 use dsa_dynamic_programming::text_diff;
+use std::{env, process};
 
 fn main() {
     let args: Vec<String> = env::args().collect();

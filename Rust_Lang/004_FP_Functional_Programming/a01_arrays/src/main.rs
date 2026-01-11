@@ -9,7 +9,10 @@ fn main() {
     let my_squares = my_arr.map(|c| c * c);
     let my_squares_2 = my_arr.map(squares);
     let my_is_even = my_arr.iter().filter(|c| *c % 2 == 0);
-    let my_arr_filter25 = my_arr.iter().filter_map(|c| Some(*c > 25));
+    let my_arr_filter25: Vec<i32> = my_arr
+        .iter()
+        .filter_map(|c| if c > &25 { Some(*c) } else { None })
+        .collect();
 
     println!("basic list : {my_arr:?}");
     println!("arr idx 2 : {my_idx_2:?}");

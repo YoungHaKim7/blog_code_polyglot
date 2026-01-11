@@ -7,7 +7,7 @@ fn main() {
 
     // === Index Access (use carefully) ===
     let value = numbers[2];
-    println!("\n=== Index Access (use carefully) ===");
+    println!("\n=== Index Access ===");
     println!("{value}"); // 30
 
     // === Map: Transform each element ===

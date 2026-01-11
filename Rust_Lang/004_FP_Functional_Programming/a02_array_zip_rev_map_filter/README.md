@@ -4,7 +4,7 @@
 === Basic List ===
 [10, 20, 30, 40]
 
-=== Index Access (use carefully) ===
+=== Index Access ===
 30
 
 === Map: Transform each element ===
@@ -49,6 +49,5 @@ false
 [40, 30, 20, 10]
 Some(10)
 Some(40)
-
 ```
 

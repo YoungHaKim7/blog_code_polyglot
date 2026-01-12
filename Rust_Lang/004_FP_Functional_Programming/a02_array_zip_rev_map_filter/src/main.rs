@@ -5,7 +5,7 @@ fn main() {
     println!("=== Basic List ===");
     println!("{numbers:?}"); // [10, 20, 30, 40]
 
-    // === Index Access (use carefully) ===
+    // === Index Access ===
     let value = numbers[2];
     println!("\n=== Index Access ===");
     println!("{value}"); // 30
@@ -82,7 +82,7 @@ fn main() {
     println!("{zipped:?}");
     println!("{zip_with:?}");
 
-    // === More Useful Functions ===
+    // === More Useful Functions(rev) ===
     println!("\n=== More Useful Functions ===");
     let reversed: Vec<i32> = numbers.iter().rev().copied().collect();
     let min = numbers.iter().min();

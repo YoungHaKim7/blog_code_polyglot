@@ -71,6 +71,11 @@ fn main() {
     println!("arr sum :{sum_arr02:?}");
 
     // Fold : Reduce to single value
-    let product_arr = my_arr.iter().copied().my_product();
-    println!("arr product :{product_arr:?}");
+    // my_fn  "my_product"
+    let my_product_arr = my_arr.iter().copied().my_product();
+    println!("arr product :{my_product_arr:?}");
+
+    // std "product"
+    let std_product_arr: i32 = my_arr.iter().product();
+    println!("arr product :{std_product_arr:?}");
 }

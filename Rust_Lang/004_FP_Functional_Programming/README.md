@@ -6,6 +6,12 @@
 - https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.fold
 - https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.reduce
 
+- 둘다 타입 변환 가능
+  - `fold`는 리턴값이 직접 값이 나온다
+    - `fold` - Uses `*x` as `u32` to cast each `&i32` to `u32` before adding
+  - `reduce`는 `Option<T>`가 나옴
+    - `reduce` - First maps `i32` to `u32`, then reduces (returns `Option`)
+
 ⏺ Fixed. The key difference between fold and reduce for type conversion:
 
 |Method|Initial Value|Return Type |Use Case|

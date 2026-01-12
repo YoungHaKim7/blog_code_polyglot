@@ -6,7 +6,11 @@ trait MySumExt: Sized {
     fn my_sum(self) -> i32;
 }
 
-impl<T: Iterator<Item = i32>> MySumExt for T {
+// impl<T: Iterator<Item = i32>> MySumExt for T
+impl<T> MySumExt for T
+where
+    T: Iterator<Item = i32>,
+{
     fn my_sum(self) -> i32 {
         let mut total = 0;
         for num in self {

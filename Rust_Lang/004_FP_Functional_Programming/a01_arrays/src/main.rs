@@ -1,7 +1,3 @@
-fn my_squares(x: i32) -> i32 {
-    x * x
-}
-
 trait MySumExt: Sized {
     fn my_sum(self) -> i32;
     fn my_product(self) -> i32;
@@ -27,6 +23,10 @@ where
         }
         my_total
     }
+}
+
+fn my_squares(x: i32) -> i32 {
+    x * x
 }
 
 fn main() {

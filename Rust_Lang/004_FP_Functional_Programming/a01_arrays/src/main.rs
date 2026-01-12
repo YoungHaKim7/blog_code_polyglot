@@ -53,9 +53,11 @@ fn main() {
         .collect();
     println!("arr filter > 25 :{my_arr_filter25:?}");
 
+    // my_sum()  custom method
     let sum_arr: i32 = my_arr.iter().copied().my_sum();
     println!("arr sum :{sum_arr:?}");
 
+    // std sum() method
     let sum_arr02: i32 = my_arr.iter().sum();
     println!("arr sum :{sum_arr02:?}");
 }

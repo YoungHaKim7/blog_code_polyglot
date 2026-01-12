@@ -1,3 +1,3 @@
 # blog_code_polyglot
 
-rust / zig / c / c++ / etc..
+rust / zig / c / c++ / haskell / etc..

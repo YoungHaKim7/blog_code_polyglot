@@ -9,8 +9,10 @@
 - 둘다 타입 변환 가능
   - `fold`는 리턴값이 직접 값이 나온다
     - `fold` - Uses `*x` as `u32` to cast each `&i32` to `u32` before adding
+    - 접기 - `*x`를 `u32`로 사용하여 각 `&i32`를 `u32`로 캐스팅한 후 추가합니다
   - `reduce`는 `Option<T>`가 나옴
     - `reduce` - First maps `i32` to `u32`, then reduces (returns `Option`)
+    - 축소 - 먼저 `i32`를 `u32`로 매핑한 다음 축소((옵션)`Option` 반환)합니다
 
 ⏺ Fixed. The key difference between fold and reduce for type conversion:
 

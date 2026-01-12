@@ -2,7 +2,10 @@ fn squares(x: i32) -> i32 {
     x * x
 }
 
-fn sum(x: Vec<i32>) -> i32 {
+fn sum<T>(x: Vec<i32>) -> i32
+where
+    T: Iterator,
+{
     let mut total = 0;
     for num in x {
         total += num;
@@ -43,5 +46,5 @@ fn main() {
         .collect();
     println!("arr filter > 25 :{my_arr_filter25:?}");
 
-    let sum_arr = my_arr.map(sum);
+    let sum_arr = my_arr.map(|c| c.sum());
 }

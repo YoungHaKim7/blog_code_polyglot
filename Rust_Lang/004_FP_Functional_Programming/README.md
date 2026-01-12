@@ -3,6 +3,8 @@
 - https://doc.rust-lang.org/stable/std/primitive.array.html#method.map
 
 # `fold` & `reduce` 활용
+- https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.fold
+- https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.reduce
 
 ⏺ Fixed. The key difference between fold and reduce for type conversion:
 
@@ -16,18 +18,21 @@
   - Line 86: reduce - First maps i32 to u32, then reduces (returns Option<u32>)
 
 ```rs
+let my_arr: [i32, 4] = [10, 20, 30, 40];
+
 // Fold : Reduce to single value (i32 -> u32 conversion)
 let my_fold_arr: u32 = my_arr
-    .iter()
-    .fold(0u32, |acc, x| acc + *x as u32);
+                        .iter()
+                        .fold(0u32, |acc, x| acc + *x as u32);
 
 println!("arr fold (i32->u32) :{my_fold_arr}");
 
 // Reduce : Alternative without initial value (returns Option)
 let my_reduce_arr: Option<u32> = my_arr
-    .iter()
-    .map(|x| *x as u32)
-    .reduce(|acc, x| acc + x);
+                                    .iter()
+                                    .map(|x| *x as u32)
+                                    .reduce(|acc, x| acc + x);
+
 println!("arr reduce (i32->u32) :{my_reduce_arr:?}");
 ```
 

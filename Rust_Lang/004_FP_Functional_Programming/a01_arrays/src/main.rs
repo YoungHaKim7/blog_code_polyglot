@@ -1,3 +1,7 @@
+fn my_squares(x: i32) -> i32 {
+    x * x
+}
+
 trait MySumExt: Sized {
     fn my_sum(self) -> i32;
     fn my_product(self) -> i32;
@@ -23,10 +27,6 @@ where
         }
         my_total
     }
-}
-
-fn my_squares(x: i32) -> i32 {
-    x * x
 }
 
 fn main() {
@@ -70,7 +70,6 @@ fn main() {
     let sum_arr02: i32 = my_arr.iter().sum();
     println!("arr sum :{sum_arr02:?}");
 
-    // Fold : Reduce to single value
     // my_fn  "my_product"
     let my_product_arr = my_arr.iter().copied().my_product();
     println!("arr product :{my_product_arr:?}");
@@ -78,4 +77,12 @@ fn main() {
     // std "product"
     let std_product_arr: i32 = my_arr.iter().product();
     println!("arr product :{std_product_arr:?}");
+    //
+    // Fold : Reduce to single value (i32 -> u32 conversion)
+    let my_fold_arr: u32 = my_arr.iter().fold(0u32, |acc, x| acc + *x as u32);
+    println!("arr fold (i32->u32) :{my_fold_arr}");
+
+    // Reduce : Alternative without initial value (returns Option)
+    let my_reduce_arr: Option<u32> = my_arr.iter().map(|x| *x as u32).reduce(|acc, x| acc + x);
+    println!("arr reduce (i32->u32) :{my_reduce_arr:?}");
 }

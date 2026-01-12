@@ -2,7 +2,8 @@
 
 ```bash
 ❯ cargo r
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
+   Compiling a01_arrays v0.1.0 (/Users/gy-gyoung/my_project/Rust_Lang/9999/2222/blog_code_polyglot/Rust_Lang/004_FP_Functional_Programming/a01_arrays)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.20s
      Running `target/debug/a01_arrays`
 basic list : [10, 20, 30, 40]
 arr idx 2 : 30
@@ -15,8 +16,24 @@ arr filter > 25 :[30, 40]
 arr sum :100
 arr sum :100
 arr product :240000
-
+arr product :240000
+arr fold (i32->u32) :100
+arr reduce (i32->u32) :Some(100)
 ```
+
+# `fold` & `reduce` 활용
+
+⏺ Fixed. The key difference between fold and reduce for type conversion:
+  ┌────────┬──────────────────────────────────┬──────────────┬─────────────────────────────────────────────────────────────┐
+  │ Method │          Initial Value           │ Return Type  │                          Use Case                           │
+  ├────────┼──────────────────────────────────┼──────────────┼─────────────────────────────────────────────────────────────┤
+  │ fold   │ Required (specifies output type) │ Direct value │ When you want to control the accumulator type               │
+  ├────────┼──────────────────────────────────┼──────────────┼─────────────────────────────────────────────────────────────┤
+  │ reduce │ Not needed                       │ Option<T>    │ When the iterator may be empty, type inferred from elements │
+  └────────┴──────────────────────────────────┴──────────────┴─────────────────────────────────────────────────────────────┘
+  Summary of changes:
+  - Line 82: fold - Uses *x as u32 to cast each &i32 to u32 before adding
+  - Line 86: reduce - First maps i32 to u32, then reduces (returns Option<u32>)
 
 
 # ⏺ Fixed. The changes made:

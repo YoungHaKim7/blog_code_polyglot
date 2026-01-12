@@ -1,9 +1,10 @@
-fn squares(x: i32) -> i32 {
+fn my_squares(x: i32) -> i32 {
     x * x
 }
 
 trait MySumExt: Sized {
     fn my_sum(self) -> i32;
+    fn my_product(self) -> i32;
 }
 
 // impl<T: Iterator<Item = i32>> MySumExt for T
@@ -18,6 +19,14 @@ where
         }
         total
     }
+
+    fn my_product(self) -> i32 {
+        let mut my_total = 1;
+        for num in self {
+            my_total *= num;
+        }
+        my_total
+    }
 }
 
 fn main() {
@@ -30,10 +39,10 @@ fn main() {
     let my_arr_map_2 = my_arr.map(|c| c * 3);
     println!("arr map :{my_arr_map_2:?}");
 
-    let my_squares = my_arr.map(|c| c * c);
-    println!("arr squares :{my_squares:?}");
+    let squares_arr = my_arr.map(|c| c * c);
+    println!("arr squares :{squares_arr:?}");
 
-    let my_squares_2 = my_arr.map(squares);
+    let my_squares_2 = my_arr.map(my_squares);
     println!("arr squares :{my_squares_2:?}");
 
     let my_is_even = my_arr.iter().filter(|c| *c % 2 == 0);
@@ -60,4 +69,8 @@ fn main() {
     // std sum() method
     let sum_arr02: i32 = my_arr.iter().sum();
     println!("arr sum :{sum_arr02:?}");
+
+    // Fold : Reduce to single value
+    let product_arr = my_arr.iter().copied().my_product();
+    println!("arr product :{product_arr:?}");
 }

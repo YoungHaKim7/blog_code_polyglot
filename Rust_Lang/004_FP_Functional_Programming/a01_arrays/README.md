@@ -1,6 +1,9 @@
 # Result
 
 ```bash
+❯ cargo r
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
+     Running `target/debug/a01_arrays`
 basic list : [10, 20, 30, 40]
 arr idx 2 : 30
 arr map :[30, 60, 90, 120]
@@ -11,6 +14,7 @@ arr filter(isEven) : [10, 20, 30, 40]
 arr filter > 25 :[30, 40]
 arr sum :100
 arr sum :100
+arr product :240000
 
 ```
 
@@ -26,3 +30,15 @@ arr sum :100
   main.rs:52 - Added .copied() because iter() yields &i32 references, not i32 values. The .copied() converts &i32 → i32 so my_sum() can work.
 
   Output shows the sum working correctly: arr sum :100 (10 + 20 + 30 + 40 = 100)
+
+- All errors are fixed. The my_product() method now works correctly:
+
+  Summary of fixes:
+  1. src/main.rs:7 - Changed trait signature from fn my_product(x: i32) -> i32 to fn my_product(self) -> i32 to match the impl
+  2. src/main.rs:24 - Changed initial value from 0 to 1 (product must start at 1, otherwise result is always 0)
+  3. src/main.rs:42 - Renamed my_squares variable to squares_arr to avoid shadowing the my_squares function
+  4. src/main.rs:75 - Added println! for product output
+
+  Result:
+  arr product :240000
+  10 × 20 × 30 × 40 = 240,000

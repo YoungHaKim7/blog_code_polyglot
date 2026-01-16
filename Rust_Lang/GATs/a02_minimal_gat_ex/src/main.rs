@@ -13,7 +13,10 @@ struct SliceIter<'slice, T> {
 }
 
 impl<'slice, T> BorrowingIterator for SliceIter<'slice, T> {
-    type Item<'a> = &'a T where Self: 'a;
+    type Item<'a>
+        = &'a T
+    where
+        Self: 'a;
 
     fn next<'a>(&'a mut self) -> Option<Self::Item<'a>> {
         if self.index < self.data.len() {
@@ -27,11 +30,13 @@ impl<'slice, T> BorrowingIterator for SliceIter<'slice, T> {
 }
 
 fn main() {
-    let data = vec
-![1, 2, 3, 4, 5];
+    let data = vec![1, 2, 3, 4, 5];
 
     // Create iterator borrowing from data
-    let mut iter = SliceIter { data: &data, index: 0 };
+    let mut iter = SliceIter {
+        data: &data,
+        index: 0,
+    };
 
     // Zero-copy iteration: items are borrowed, not cloned
     while let Some(item) = iter.next() {

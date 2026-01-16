@@ -40,5 +40,6 @@ Resume after break:
 
 - 1. Example 1: Basic integer iteration - Simple iteration over a vector of integers
 - 2. Example 2: String iteration - Iterating over string slices
-- 3. Example 3: Multiple iterators - Shows zero-copy borrowing with two independent iterators from the same data                                                                                4. Example 4: Custom type iteration - Using a custom Point struct with Debug trait
+- 3. Example 3: Multiple iterators - Shows zero-copy borrowing with two independent iterators from the same data
+- 4. Example 4: Custom type iteration - Using a custom Point struct with Debug trait
 - 5. Example 5: Partial iteration - Demonstrating partial iteration and resuming

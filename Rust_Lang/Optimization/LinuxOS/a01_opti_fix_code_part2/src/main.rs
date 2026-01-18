@@ -1,32 +1,28 @@
 use std::thread;
 
-struct Counters {
-    a: u64,
-    b: u64,
-}
-
 fn main() {
-    let mut c = Counters { a: 0, b: 0 };
-    let p = &mut c as *mut Counters as usize;
+    // Thread-local reduction: each thread works on its own local variable
+    // No shared memory = no false sharing = no cache line bouncing
 
-    let t1 = thread::spawn(move || {
-        let p = p as *mut Counters;
+    let t1 = thread::spawn(|| {
+        let mut local_a = 0u64;
         for _ in 0..50_000_000 {
-            unsafe {
-                (*p).a += 1;
-            }
+            local_a += 1;
         }
+        local_a
     });
 
-    let t2 = thread::spawn(move || {
-        let p = p as *mut Counters;
+    let t2 = thread::spawn(|| {
+        let mut local_b = 0u64;
         for _ in 0..50_000_000 {
-            unsafe {
-                (*p).b += 1;
-            }
+            local_b += 1;
         }
+        local_b
     });
 
-    t1.join().unwrap();
-    t2.join().unwrap();
+    let a = t1.join().unwrap();
+    let b = t2.join().unwrap();
+
+    // Optional: verify results
+    // println!("a: {}, b: {}", a, b);
 }

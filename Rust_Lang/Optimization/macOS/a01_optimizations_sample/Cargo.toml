@@ -1,0 +1,11 @@
+[package]
+name = "a01_optimizations_sample"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.release]
+debug = true
+lto = false
+codegen-units = 1

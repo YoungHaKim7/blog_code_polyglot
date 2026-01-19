@@ -4,7 +4,9 @@
   - 3th Gen Intel(R) Core(TM) i5-13600K (20) @ 5.10 GHz
 
 ```bash
-Multiplication time : 1.252359 seconds
+$ cargo r --release
+
+Multiplication Time: 0.358726 seconds
 
 ```
 

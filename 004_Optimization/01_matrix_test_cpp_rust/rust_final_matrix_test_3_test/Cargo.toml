@@ -1,0 +1,12 @@
+[package]
+name = "rust_final_matrix_test_3_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+

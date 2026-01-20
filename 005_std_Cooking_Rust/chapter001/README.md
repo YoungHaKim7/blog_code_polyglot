@@ -33,3 +33,10 @@ i64 default 하면 : 0
     크러스트_type: 얇게,
 }
 ```
+
+- cow
+
+
+```bash
+Stored text: "John" | Total characters counted: 4
+```

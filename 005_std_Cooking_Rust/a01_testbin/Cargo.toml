@@ -1,0 +1,14 @@
+[package]
+name = "a01_testbin"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+add_test = {path="./crates/add_test"}
+
+[workspace]
+members = ["./crates/*"]
+ 
+# rust 2021  이전 모드 
+# resolver = "2"
+

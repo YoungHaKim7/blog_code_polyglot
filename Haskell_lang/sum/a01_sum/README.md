@@ -1,8 +1,8 @@
 # Result
 
 ```bash
+$ cabal run
 Sum: 15
-
 ```
 
 

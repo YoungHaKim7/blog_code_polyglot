@@ -1,6 +1,22 @@
 # Result
 
 ```bash
+Some(6)
+
+#####
+example 2
+
+None
+
+#####
+example 3
+
+sum = 60
+
+#####
+example 4
+
+Some("Rust Lang")
 
 ```
 

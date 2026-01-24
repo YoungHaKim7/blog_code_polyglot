@@ -31,6 +31,6 @@ fn main() {
     println!("\n#####\nexample 4\n");
     let words = vec!["Rust", " ", "Lang"];
 
-    let result = sum(words.into_iter());
+    let result: Option<String> = if words.is_empty() { None } else { Some(words.concat()) };
     println!("{:?}", result); // Some("Rust Lang")
 }

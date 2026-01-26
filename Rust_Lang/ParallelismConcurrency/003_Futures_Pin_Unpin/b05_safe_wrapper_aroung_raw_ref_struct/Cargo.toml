@@ -1,0 +1,6 @@
+[package]
+name = "b05_safe_wrapper_aroung_raw_ref_struct"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

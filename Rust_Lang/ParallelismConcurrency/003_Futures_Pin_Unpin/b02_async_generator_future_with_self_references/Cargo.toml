@@ -1,0 +1,6 @@
+[package]
+name = "b02_async_generator_future_with_self_references"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

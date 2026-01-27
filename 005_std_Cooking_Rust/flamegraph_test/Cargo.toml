@@ -1,0 +1,17 @@
+[package]
+name = "flamegraph_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dhat = "0.3.3"
+
+[profile.release]
+debug = 1
+# 1 2
+# -O1  -O2 -O3    -lto(용량을 줄일수 있다.)
+
+
+[features]
+dhat-heap = []    # if you are doing heap profiling
+dhat-ad-hoc = []  # if you are doing ad hoc profiling

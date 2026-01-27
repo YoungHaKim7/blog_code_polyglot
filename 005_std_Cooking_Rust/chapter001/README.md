@@ -2,6 +2,31 @@
 
 ```bash
 
+
+```
+- format 
+
+```bash
+출력 해보자 : 나의 좋아하는 숫자는 : 42
+0x7ffc518f2a10
+24
+내가 좋아하는 색깔은 black, hello , world
+a b formatted : Interger: 10, Float: 10.22
+ a b 10.2222222 10
+
+after10 10.2222222
+Hello
+Hello, world!
+The number is 1
+(3, 4)
+4
+Hello Rustaceans!
+1 2
+0042
+(
+    100,
+    200,
+)
 ```
 
 

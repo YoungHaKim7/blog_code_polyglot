@@ -1,4 +1,3 @@
-
 # Free Functions vs. Associated Functions (Methods)
 
 |Feature| 	Free Function	|Associated Function (Method)|
@@ -7,3 +6,8 @@
 |Calling Syntax|	`function_name(args)` or `module::function_name(args)`. |	`instance.method_name(args)` or `Struct::method_name(args)` (if it doesn't take `&self`, `&mut self`, or `self`).|
 |`self` Parameter| Does not take `&self`, `&mut self`, or `self` as a parameter.|	Takes `&self`, `&mut self`, or `self` to operate on an instance of the struct.|
 |Use Case|	Often used for static utility functions, operations where no single data "owner" is clear, or generic functions.|	Used when the function's logic is tightly coupled to a specific data structure.|
+
+# typst
+
+- https://github.com/typst/typst
+- https://github.com/typst/typst/issues/721

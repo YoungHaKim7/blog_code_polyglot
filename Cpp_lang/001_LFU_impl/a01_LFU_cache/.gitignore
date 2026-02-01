@@ -4,6 +4,7 @@
 # build files
 target
 build
+justfile
 
 # clangd
 .cache

@@ -1,0 +1,6 @@
+[package]
+name = "b01_static_array_stack_impl"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

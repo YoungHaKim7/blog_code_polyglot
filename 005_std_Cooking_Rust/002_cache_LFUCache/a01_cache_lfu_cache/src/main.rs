@@ -3,16 +3,16 @@ use std::hash::Hash;
 
 type Freq = u64;
 
+/// Using VecDeque instead of LinkedList for better stable API support
+type ElementList<K, V> = VecDeque<Entry<K, V>>;
+type FrequencyList<K, V> = VecDeque<(Freq, ElementList<K, V>)>;
+
 /// Entry<K, V> == C++ struct Entry<K, V>
 #[derive(Clone)]
 struct Entry<K, V> {
     key: K,
     value: V,
 }
-
-/// Using VecDeque instead of LinkedList for better stable API support
-type ElementList<K, V> = VecDeque<Entry<K, V>>;
-type FrequencyList<K, V> = VecDeque<(Freq, ElementList<K, V>)>;
 
 pub struct LFUCache<K, V> {
     /// key -> frequency

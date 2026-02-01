@@ -1,0 +1,6 @@
+[package]
+name = "c01_const_constructible_version"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

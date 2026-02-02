@@ -1,0 +1,6 @@
+[package]
+name = "a04_modify_only_if_key_exists"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

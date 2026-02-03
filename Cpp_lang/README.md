@@ -16,3 +16,7 @@
 
 # How to implement a Least Frequently Used (LFU) cache?
 - https://stackoverflow.com/questions/21117636/how-to-implement-a-least-frequently-used-lfu-cache?rq=3
+
+# 로제타 코드
+- 내가 원하는거 찾아서 훔쳐보기
+  - https://rosettacode.org/wiki/Queue/Usage#C++

@@ -30,3 +30,4 @@ real: immune wins with 2834 units left after 42 boost
   - Real: infection wins with 22859 units left
   - Test: immune wins with 51 units left after 1570 boost
   - Real: immune wins with 2834 units left after 42 boost
+

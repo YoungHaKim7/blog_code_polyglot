@@ -1,0 +1,6 @@
+[package]
+name = "a03_unsafe_rust_training"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

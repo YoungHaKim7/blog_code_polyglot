@@ -46,8 +46,12 @@ impl<T, const N: usize> Stack<T, N> {
         }
 
         unsafe {
-            // Shift elements right
-            ptr::copy(self.data.as_ptr(), self.data.as_mut_ptr().add(1), self.len);
+            // Get raw pointer once - use it for both source and destination
+            let data_ptr = self.data.as_mut_ptr();
+            // Shift elements right by copying from right to left
+            for i in (0..self.len).rev() {
+                ptr::copy(data_ptr.add(i), data_ptr.add(i + 1), 1);
+            }
         }
 
         self.data[0].write(value);
@@ -156,6 +160,12 @@ impl<T, const N: usize> Stack<T, N> {
     pub fn iter_mut(&mut self) -> IterMut<'_, T, N> {
         let index = self.len;
         IterMut { stack: self, index }
+    }
+}
+
+impl<T, const N: usize> Default for Stack<T, N> {
+    fn default() -> Self {
+        Self::new()
     }
 }
 

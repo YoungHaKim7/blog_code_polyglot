@@ -1,0 +1,27 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/build",
+	"dir-cur-src" : "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque",
+	"dir-top-bld" : "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/build",
+	"dir-top-src" : "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/build/CMakeFiles/a01_deque.dir",
+	"sources" : 
+	{
+		"CMakeFiles/a01_deque.dir/src/main.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/src/main.cpp"
+		}
+	}
+}

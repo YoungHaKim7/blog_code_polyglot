@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/build",
+  "command": "/usr/bin/clang++-21 -g -std=c++26 -flto=thin -pedantic -pthread -pedantic-errors -lm -Wall -Wextra -ggdb @CMakeFiles/a01_deque.dir/src/main.cpp.o.modmap -o CMakeFiles/a01_deque.dir/src/main.cpp.o -c /home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/src/main.cpp",
+  "file": "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/src/main.cpp",
+  "output": "/home/gy/my_project/Rust_Lang/99999/blog_code_polyglot/Cpp_lang/002_deque/a01_deque/build/CMakeFiles/a01_deque.dir/src/main.cpp.o"
+}
+]

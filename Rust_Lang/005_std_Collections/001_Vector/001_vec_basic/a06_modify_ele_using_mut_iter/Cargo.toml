@@ -1,0 +1,6 @@
+[package]
+name = "a06_modify_ele_using_mut_iter"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

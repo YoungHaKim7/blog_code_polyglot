@@ -1,0 +1,6 @@
+[package]
+name = "a01_create_an_empty_vec_push"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

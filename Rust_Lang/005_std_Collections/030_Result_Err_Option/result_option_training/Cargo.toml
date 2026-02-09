@@ -1,0 +1,10 @@
+[package]
+name = "result_option_training"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[lib]
+name = "error_management_examples"
+path = "error_management_examples.rs"

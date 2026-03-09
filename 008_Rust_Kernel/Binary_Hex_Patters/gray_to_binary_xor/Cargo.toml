@@ -1,0 +1,6 @@
+[package]
+name = "gray_to_binary_xor"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

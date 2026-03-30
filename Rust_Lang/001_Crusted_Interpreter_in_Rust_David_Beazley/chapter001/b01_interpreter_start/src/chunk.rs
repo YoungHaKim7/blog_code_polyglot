@@ -29,15 +29,15 @@ impl Chunk {
         self.constants.len() - 1
     }
 
-    pub fn write(&mut self, op: OpCode, line: usize) {
-        self.code.push(op);
-        self.lines.push(line);
-    }
-
     pub fn disassemble(&self, name: &str) {
         println!("== {name} ==");
         for (n, inst) in self.code.iter().enumerate() {
-            println!("{n:04}, {inst:?}");
+            println!("{n:04}, {:5} {inst:?}", self.lines[n]);
         }
+    }
+
+    pub fn write(&mut self, op: OpCode, line: usize) {
+        self.code.push(op);
+        self.lines.push(line);
     }
 }

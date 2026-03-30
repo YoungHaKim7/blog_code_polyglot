@@ -32,7 +32,11 @@ impl Chunk {
     pub fn disassemble(&self, name: &str) {
         println!("== {name} ==");
         for (n, inst) in self.code.iter().enumerate() {
-            println!("{n:04}, {:5} {inst:?}", self.lines[n]);
+            let op = match inst {
+                OpCode::OP_CONSTANT(n) => format!("OP_CONSTANT({:?})", self.constants[*n]),
+                i => format!("{i:?}"),
+            };
+            println!("{n:04}, {:5} {op:?}", self.lines[n]);
         }
     }
 

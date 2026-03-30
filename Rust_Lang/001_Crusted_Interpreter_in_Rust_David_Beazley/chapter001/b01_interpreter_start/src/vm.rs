@@ -18,7 +18,7 @@ impl<'a> VM<'a> {
 
     pub fn interpret(&mut self, chunk: &'a Chunk) -> InterpretResult {
         self.chunk = Some(chunk);
-        InterpretResult::Ok
+        self.run()
     }
 
     pub fn run(&mut self) -> InterpretResult {
@@ -27,6 +27,10 @@ impl<'a> VM<'a> {
             let instruction = &chunk.code[self.ip];
             match instruction {
                 OpCode::OP_RETURN => return InterpretResult::Ok,
+                OpCode::OP_CONSTANT(n) => {
+                    let constant = chunk.constants[*n];
+                    println!("{:?}", constant);
+                }
                 _ => todo!("{instruction:?}"),
             }
         }

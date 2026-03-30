@@ -1,4 +1,7 @@
-use crate::chunk::{Chunk, OpCode};
+use crate::{
+    chunk::{Chunk, OpCode},
+    value::Value,
+};
 
 pub enum InterpretResult {
     Ok,
@@ -9,6 +12,7 @@ pub enum InterpretResult {
 pub struct VM<'a> {
     chunk: Option<&'a Chunk>,
     ip: usize,
+    stack: Vec<Value>,
     trace_execution: bool,
 }
 
@@ -17,6 +21,7 @@ impl<'a> VM<'a> {
         Self {
             chunk: None,
             ip: 0,
+            stack: Vec::new(),
             trace_execution: false,
         }
     }

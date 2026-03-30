@@ -9,11 +9,16 @@ pub enum InterpretResult {
 pub struct VM<'a> {
     chunk: Option<&'a Chunk>,
     ip: usize,
+    trace_execution: bool,
 }
 
 impl<'a> VM<'a> {
     pub fn new() -> Self {
-        Self { chunk: None, ip: 0 }
+        Self {
+            chunk: None,
+            ip: 0,
+            trace_execution: false,
+        }
     }
 
     pub fn interpret(&mut self, chunk: &'a Chunk) -> InterpretResult {
@@ -26,6 +31,9 @@ impl<'a> VM<'a> {
         loop {
             let instruction = &chunk.code[self.ip];
             self.ip += 1;
+            if self.trace_execution {
+                println!("{instruction:?}")
+            }
             match instruction {
                 OpCode::OP_RETURN => return InterpretResult::Ok,
                 OpCode::OP_CONSTANT(n) => {

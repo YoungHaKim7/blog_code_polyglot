@@ -6,6 +6,7 @@ use crate::value::Value;
 pub enum OpCode {
     OP_RETURN,
     OP_CONSTANT(usize),
+    OP_NEGATE,
 }
 
 #[derive(Debug)]

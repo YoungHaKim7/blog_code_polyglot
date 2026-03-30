@@ -61,6 +61,10 @@ impl<'a> VM<'a> {
                     let constant = chunk.constants[*n];
                     self.push(constant);
                 }
+                OpCode::OP_NEGATE => {
+                    let val = self.pop();
+                    self.push(-val);
+                }
                 _ => todo!("{instruction:?}"),
             }
         }

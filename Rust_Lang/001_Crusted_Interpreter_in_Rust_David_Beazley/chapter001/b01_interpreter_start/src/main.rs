@@ -4,6 +4,8 @@ use crate::{
 };
 
 mod chunk;
+#[macro_use]
+mod macros;
 mod value;
 mod vm;
 

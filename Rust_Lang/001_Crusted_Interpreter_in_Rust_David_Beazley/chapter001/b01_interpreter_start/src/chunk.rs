@@ -7,6 +7,10 @@ pub enum OpCode {
     OP_RETURN,
     OP_CONSTANT(usize),
     OP_NEGATE,
+    OP_ADD,
+    OP_SUBTRACT,
+    OP_MULTIPLY,
+    OP_DIVIDE,
 }
 
 #[derive(Debug)]

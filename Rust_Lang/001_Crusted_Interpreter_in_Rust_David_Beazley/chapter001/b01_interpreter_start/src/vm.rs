@@ -65,6 +65,10 @@ impl<'a> VM<'a> {
                     let val = self.pop();
                     self.push(-val);
                 }
+                OpCode::OP_ADD => binary_op!(self, +),
+                OpCode::OP_SUBTRACT => binary_op!(self, -),
+                OpCode::OP_MULTIPLY => binary_op!(self, *),
+                OpCode::OP_DIVIDE => binary_op!(self, /),
                 _ => todo!("{instruction:?}"),
             }
         }

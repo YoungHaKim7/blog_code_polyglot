@@ -2,6 +2,7 @@ use crate::chunk::{Chunk, OpCode::*};
 
 mod chunk;
 mod value;
+mod vm;
 
 fn main() {
     println!("Hello, lox!");

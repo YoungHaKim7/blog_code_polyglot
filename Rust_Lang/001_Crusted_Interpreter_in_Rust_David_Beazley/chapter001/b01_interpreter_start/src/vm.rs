@@ -14,6 +14,7 @@ pub struct VM<'a> {
     ip: usize,
     stack: Vec<Value>,
     trace_execution: bool,
+    trace_stack: bool,
 }
 
 impl<'a> VM<'a> {
@@ -23,6 +24,7 @@ impl<'a> VM<'a> {
             ip: 0,
             stack: Vec::new(),
             trace_execution: false,
+            trace_stack: false,
         }
     }
 
@@ -47,11 +49,17 @@ impl<'a> VM<'a> {
             if self.trace_execution {
                 println!("{instruction:?}")
             }
+            if self.trace_stack {
+                println!("      {:?}", self.stack);
+            }
             match instruction {
-                OpCode::OP_RETURN => return InterpretResult::Ok,
+                OpCode::OP_RETURN => {
+                    println!("{:?}", self.pop());
+                    return InterpretResult::Ok;
+                }
                 OpCode::OP_CONSTANT(n) => {
                     let constant = chunk.constants[*n];
-                    println!("{:?}", constant);
+                    self.push(constant);
                 }
                 _ => todo!("{instruction:?}"),
             }

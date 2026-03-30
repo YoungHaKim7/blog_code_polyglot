@@ -26,6 +26,14 @@ impl<'a> VM<'a> {
         }
     }
 
+    pub fn push(&mut self, value: Value) {
+        self.stack.push(value);
+    }
+
+    pub fn pop(&mut self) -> Value {
+        self.stack.pop().unwrap()
+    }
+
     pub fn interpret(&mut self, chunk: &'a Chunk) -> InterpretResult {
         self.chunk = Some(chunk);
         self.run()

@@ -1,4 +1,7 @@
-use crate::chunk::{Chunk, OpCode::*};
+use crate::{
+    chunk::{Chunk, OpCode::*},
+    vm::VM,
+};
 
 mod chunk;
 mod value;
@@ -12,4 +15,6 @@ fn main() {
     chunk.write(OP_CONSTANT(constant), 1);
     chunk.write(OP_RETURN, 1);
     chunk.disassemble("test chunk");
+    let mut vm = VM::new();
+    vm.interpret(&chunk);
 }

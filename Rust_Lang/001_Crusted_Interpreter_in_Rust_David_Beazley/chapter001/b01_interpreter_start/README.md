@@ -8,3 +8,16 @@ Hello, lox!
 
 ```
 
+# `cargo expand`
+
+```bash
+$ cargo expand vm::VM
+
+pub struct VM<'a> {
+    chunk: Option<&'a Chunk>,
+    ip: usize,
+    stack: Vec<Value>,
+    trace_execution: bool,
+    trace_stack: bool,
+}
+```

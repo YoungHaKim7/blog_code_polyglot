@@ -25,6 +25,7 @@ impl<'a> VM<'a> {
         let chunk = self.chunk.unwrap();
         loop {
             let instruction = &chunk.code[self.ip];
+            self.ip += 1;
             match instruction {
                 OpCode::OP_RETURN => return InterpretResult::Ok,
                 OpCode::OP_CONSTANT(n) => {
